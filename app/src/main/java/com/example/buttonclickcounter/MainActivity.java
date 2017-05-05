@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         userInput = (EditText) findViewById(R.id.editText);
+        userInput.setText("");
         Button button = (Button) findViewById(R.id.button);
         textView = (TextView) findViewById(R.id.textView);
         textView.setText("");
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 String result = userInput.getText().toString();
                 result += "\n";
                 textView.append(result);
+                userInput.setText("");
             }
         };
 
